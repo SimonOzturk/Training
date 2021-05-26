@@ -1,0 +1,47 @@
+[
+    {
+        "UserPrincipalName": "Pete@xxxx.onmicrosoft.com",
+        "DisplayName": "Pete Coventry",
+        "FirstName": "Pete",
+        "LastName": "Coventry",
+        "Password": "Pa$$w0rd",
+        "UsageLocation": "GB",
+        "ForceChangePassword": false
+    },
+    {
+        "UserPrincipalName": "Ashley@xxxx.onmicrosoft.com",
+        "DisplayName": "Ashley Curtis",
+        "FirstName": "Ashley",
+        "LastName": "Curtis",
+        "Password": "Pa$$w0rd",
+        "UsageLocation": "GB",
+        "ForceChangePassword": false
+    },
+    {
+        "UserPrincipalName": "Mark@xxxx.onmicrosoft.com",
+        "DisplayName": "Mark Summers",
+        "FirstName": "Mark",
+        "LastName": "Summers",
+        "Password": "Pa$$w0rd",
+        "UsageLocation": "GB",
+        "ForceChangePassword": false
+    },
+    {
+        "UserPrincipalName": "Shannen@xxxx.onmicrosoft.com",
+        "DisplayName": "Shannen Smith",
+        "FirstName": "Shannen",
+        "LastName": "Smith",
+        "Password": "Pa$$w0rd",
+        "UsageLocation": "GB",
+        "ForceChangePassword": false
+    },
+    {
+        "UserPrincipalName": "Tom@xxxx.onmicrosoft.com",
+        "DisplayName": "Tom Gooch",
+        "FirstName": "Tom",
+        "LastName": "Gooch",
+        "Password": "Pa$$w0rd",
+        "UsageLocation": "GB",
+        "ForceChangePassword": false
+    }
+]
