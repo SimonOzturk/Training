@@ -40,4 +40,7 @@ Set-MsolUserLicense -AddLicenses 'XXXX:ENTERPRISEPREMIUM' –UserPrincipalName T
 
 
 $Users = Get-Content .\Users.json  | ConvertFrom-Json
+ForEach ($User in $Users) {
+    New-MsolUser –UserPrincipalName $User.UserPrincipalName –DisplayName $User.DisplayName –FirstName $User.FirstName –LastName $User.LastName –Password $User.Password -ForceChangePassword $User.ForceChangePassword –UsageLocation $User.UsageLocation
+}
 Get-MsolUser -UnlicensedUsersOnly | Set-MsolUserLicense -AddLicenses 'XXXX:ENTERPRISEPREMIUM'
