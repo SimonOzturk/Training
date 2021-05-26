@@ -38,7 +38,7 @@ Set-MsolUserLicense -AddLicenses 'XXXX:ENTERPRISEPREMIUM' –UserPrincipalName M
 Set-MsolUserLicense -AddLicenses 'XXXX:ENTERPRISEPREMIUM' –UserPrincipalName Shannen@xxxx.onmicrosoft.com 
 Set-MsolUserLicense -AddLicenses 'XXXX:ENTERPRISEPREMIUM' –UserPrincipalName Tom@xxxx.onmicrosoft.com
 
-
+# Use These Instead
 $Users = Get-Content .\Users.json  | ConvertFrom-Json
 ForEach ($User in $Users) {
     New-MsolUser –UserPrincipalName $User.UserPrincipalName –DisplayName $User.DisplayName –FirstName $User.FirstName –LastName $User.LastName –Password $User.Password -ForceChangePassword $User.ForceChangePassword –UsageLocation $User.UsageLocation
