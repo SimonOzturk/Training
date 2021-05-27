@@ -59,6 +59,10 @@ ForEach ($SPOSite in $SPOSites) {
 # Remove-MsolGroup << AAD Groups
 # Remove-unifiedGroup << Exchange Online
 # Remove-SPOSiteGroup -Site https://XXXX.sharepoint.com/sites/ProjectSite -Identity NameOfTheGroup
+# Get-AzureADMSGroup << get the ID
+# Remove-AzureADMSGroup -Id
+
+
 
 Remove-SPOSite -Identity https://XXXX.sharepoint.com/sites/ProjectSite
 Remove-SPODeletedSite -Identity https://XXXX.sharepoint.com/sites/ProjectSite
