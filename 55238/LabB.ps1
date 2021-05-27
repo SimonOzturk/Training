@@ -8,13 +8,14 @@ Import-Module -Name 'PnP.PowerShell'
 
 $UserName = 'uuuu@xxxx.onmicrosoft.com'
 $Password = ''
-$AdminUrl = 'xxxx-admin.sharepoint.com'
+$AdminUrl = 'https://xxxx-admin.sharepoint.com'
 
 $Credential = [PSCredential]::new($UserName, (ConvertTo-SecureString $Password -AsPlainText -Force ))
 
 Connect-MsolService -Credential $Credential
 Connect-SPOService -Credential $Credential -Url $AdminUrl
 Connect-PnPOnline –Url $AdminUrl -UseWebLogin
+
 
 Get-SPOSite
 
@@ -51,5 +52,4 @@ ForEach ($SPOSite in $SPOSites) {
 }
 
 Remove-SPOSite -Identity https://XXXX.sharepoint.com/sites/ProjectSite
-
 Remove-SPODeletedSite -Identity https://XXXX.sharepoint.com/sites/ProjectSite
