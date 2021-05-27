@@ -16,6 +16,10 @@ Connect-MsolService -Credential $Credential
 Connect-SPOService -Credential $Credential -Url $AdminUrl
 Connect-PnPOnline –Url $AdminUrl -UseWebLogin
 
+Connect-PnPOnline -Url $AdminUrl -DeviceLogin -LaunchBrowser
+# Check Terminal for Code!!!
+
+
 
 Get-SPOSite
 
@@ -50,6 +54,11 @@ ForEach ($SPOSite in $SPOSites) {
     Set-SPOSite -Identity $SPOSite.Url -StorageQuota 12500 -StorageQuotaWarningLevel 11000
     Write-Host
 }
+
+# Remove Office 365 Group First
+# Remove-MsolGroup << AAD Groups
+# Remove-unifiedGroup << Exchange Online
+# Remove-SPOSiteGroup -Site https://XXXX.sharepoint.com/sites/ProjectSite -Identity NameOfTheGroup
 
 Remove-SPOSite -Identity https://XXXX.sharepoint.com/sites/ProjectSite
 Remove-SPODeletedSite -Identity https://XXXX.sharepoint.com/sites/ProjectSite
