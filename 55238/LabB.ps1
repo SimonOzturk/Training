@@ -32,6 +32,9 @@ New-PnPSite -Type TeamSite -Title 'Team CK' -Alias TeamCK
 New-PnPSite -Type TeamSite -Title 'Project Site' -Alias ProjectSite
 New-PnPSite -Type TeamSite -Title 'Team Site' -Alias TeamSite
 
+
+
+
 Set-SPOUser -site https://XXXX.sharepoint.com/sites/hr -LoginName shannen@XXXX.onmicrosoft.com -IsSiteCollectionAdmin $True
 Get-SPOUser -Site https://XXXX.sharepoint.com/sites/hr | Where-Object { $_.IsSiteAdmin }
 
