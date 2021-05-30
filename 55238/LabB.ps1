@@ -65,7 +65,9 @@ ForEach ($SPOSite in $SPOSites) {
 # Get-AzureADMSGroup << get the ID
 # Remove-AzureADMSGroup -Id
 
-
+New-PnPTerm
+New-PnPTermSet
+New-PnPTermGroup
 
 Remove-SPOSite -Identity https://XXXX.sharepoint.com/sites/ProjectSite
 Remove-SPODeletedSite -Identity https://XXXX.sharepoint.com/sites/ProjectSite
